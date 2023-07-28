@@ -1,7 +1,7 @@
 import gpt4all
 import os
 
-model_path = "/Users/diegosilva/Library/Application Support/nomic.ai/GPT4All/"
+model_path = "f://models/"
 
 model = gpt4all.GPT4All("ggml-gpt4all-j-v1.3-groovy.bin", model_path=model_path, allow_download=False)
 text_list = [
@@ -19,7 +19,7 @@ text_list = [
 
 for text in text_list:
     response = model.chat_completion([{"role":"user", 
-                                       "content":f"describe the sentiment of the text in terms of having a agreement or satisfaction strictly as 'positive','neutral' or 'negative': {text}"}], streaming=False, verbose=False)
+                                       "content":f"describe the sentiment of the text in terms of having an agreement or satisfaction strictly as 'positive','neutral' or 'negative': {text}"}], streaming=False, verbose=False)
     sentiment = response['choices'][0]["message"]['content']
     # print("-----------------------------------------------------------------")
     print(f"{text}: {sentiment} \n")
