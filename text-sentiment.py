@@ -3,7 +3,7 @@ import os
 
 model_path = "/Users/diegosilva/Library/Application Support/nomic.ai/GPT4All/"
 
-model = gpt4all.GPT4All("ggml-v3-13b-hermes-q5_1.bin", model_path=model_path, allow_download=False)
+model = gpt4all.GPT4All("ggml-gpt4all-j-v1.3-groovy.bin", model_path=model_path, allow_download=False)
 text_list = [
             "Stop sending me messages, I dont like!",
             "I love this product", 
